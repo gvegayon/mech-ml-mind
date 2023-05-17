@@ -11,6 +11,7 @@ format:
     citeproc: true
     citations-hover: true
     smaller: true
+    css: styles.css
 ---
 
 ## Quarto
@@ -86,19 +87,29 @@ After all the data pouring, attention to causal inference and mechanistic models
 
 ## MechML: My own applications
 
-::: {.columns layout-align="center"}
+::: {.columns style="text-align: center"}
 
-::: {.column width="30%"}
-Prediction of Gene Functions (R01 submitted)
+::: {.column width="25%" .rectangle}
+#### Prediction of Gene Functions<br>(R01 submitted)
+
+Combine a model of the evolution of gene function with CNNs.
 :::
 
-::: {.column width="30%"}
-Modeling Decision-Making process (R21 on the works)
+::: {.column width="2%" }
 :::
 
-::: {.column width="30%"}
-Agent-Based Models (paper)
+::: {.column width="25%" .rectangle}
+#### Modeling Decision-Making process<br>(R21 on the works)
 
+Use a social network diffusion model and ML to predict the prescription of ABX.
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="25%" .rectangle}
+#### Agent-Based Models<br>(paper)
+Use MechML for "automatic" calibration and prediction adjustment
 :::
 
 :::
