@@ -1,10 +1,18 @@
 .rectangle {
-      width: 200px;
-      height: 300px;
-      background-color: #f0f0f0;
-      border: 2px solid #000;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      vertical-align: middle;
-    }
+  width: 200px;
+  height: 300px;
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+* {
+  font-size: 120%;
+}
+
+.centering {
+  justify-content: center; display: flex; align-items: center;
+}

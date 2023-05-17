@@ -3,6 +3,7 @@ title: "Mechanistic Machine Learning: Complex Priors"
 bibliography: references.bib
 author: George G. Vega Yon, Ph.D.
 affiliation: Division of Epidemiology
+date: 2023-05-19
 format:
   revealjs:
     embed-resources: true
@@ -10,23 +11,17 @@ format:
     slide-number: true
     citeproc: true
     citations-hover: true
-    smaller: true
+    # smaller: true
     css: styles.css
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-```{r}
-1 + 1
-```
+# Overview
 
 ## Mechanistic Machine Learning
 
 After all the data pouring, attention to causal inference and mechanistic models is coming back^[@bakerMechanisticModelsMachine2018; @pearlSevenToolsCausal2019]
 
-::: {.colums layout-align="center"}
+::: {.colums layout-align="center" style="font-size: 70%"}
 
 ::: {.column width="45%" .fragment}
 ### Mechanistic models
@@ -54,7 +49,7 @@ After all the data pouring, attention to causal inference and mechanistic models
 
 ## MechML: State-of-the-art
 
-::: {style="font-size: 90%"}
+::: {style="font-size: 65%"}
 ::: {.fragment}
 - Adjusting errors in mechanistic-based prediction models (like ABMs). [@compagniHybridNeuralNetworkSEIR2022]
 :::
@@ -64,11 +59,11 @@ After all the data pouring, attention to causal inference and mechanistic models
 :::
 
 ::: {.fragment}
-- Using pathway-networks to add "external knowledge" as features. [@altaweraqiImprovedPredictionGene2022]
+- Using pathway networks to add "external knowledge" as features. [@altaweraqiImprovedPredictionGene2022]
 :::
 
 ::: {.fragment}
-- Creating a loss-function with a mechanistic penalty for modeling tumor cell-density [@gawIntegrationMachineLearning2019]
+- Creating a loss function with a mechanistic penalty for modeling tumor cell density [@gawIntegrationMachineLearning2019]
 :::
 
 ::: {.fragment}
@@ -80,14 +75,14 @@ After all the data pouring, attention to causal inference and mechanistic models
 ::: {.callout-warning}
 1. Mechanistic Machine Learning **is not** domain-knowledge-aided feature engineering. You need a whole other model to complement the ML algorithm.
 
-2. This isn't just ML ensemble; you must have an ML and a Mech model.
+2. This isn't just an ML ensemble; you must have an ML and a Mech model.
 :::
 
 :::
 
-## MechML: My own applications
+## MechML: My own applications 
 
-::: {.columns style="text-align: center"}
+::: {.columns style="justify-content: center; display: flex; align-items: center;font-size: 70%"}
 
 ::: {.column width="25%" .rectangle}
 #### Prediction of Gene Functions<br>(R01 submitted)
@@ -114,7 +109,29 @@ Use MechML for "automatic" calibration and prediction adjustment
 
 :::
 
-## MechML: Three strategies
+## E.g.: Prediction of Gene Functions
+
+## E.g.: Prescription of ABX
+
+## E.g.: ABM sandwich
+
+# Extended Example: Prediction of Behavior
+
+## 1
+
+![](fig/mechml-a.png){width="70%" fig-align="center"}
+
+## 2
+
+![](fig/mechml-b.png){width="70%" fig-align="center"}
+
+## 3
+
+![](fig/mechml-c.png){width="70%" fig-align="center"}
+
+
+
+## MechML: Three strategies 
 
 	
 ::: {.fragment}
