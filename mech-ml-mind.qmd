@@ -1,0 +1,126 @@
+---
+title: "Mechanistic Machine Learning: Complex Priors"
+bibliography: references.bib
+author: George G. Vega Yon, Ph.D.
+affiliation: Division of Epidemiology
+format:
+  revealjs:
+    embed-resources: true
+    toc: true
+    slide-number: true
+    citeproc: true
+    citations-hover: true
+    smaller: true
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+1 + 1
+```
+
+## Mechanistic Machine Learning
+
+After all the data pouring, attention to causal inference and mechanistic models is coming back^[@bakerMechanisticModelsMachine2018; @pearlSevenToolsCausal2019]
+
+::: {.colums layout-align="center"}
+
+::: {.column width="45%" .fragment}
+### Mechanistic models
+
+::: {.callout}
+- Inference-driven (causality).
+- Great for small datasets.
+- Knowledge beyond the observed data.
+:::
+
+:::
+
+
+::: {.column width="45%" .fragment}
+### Machine Learning
+
+::: {.callout}
+- Data-driven (prediction).
+- Great for big data.
+- Finds hidden knowledge in observed data.
+:::
+
+:::
+:::
+
+## MechML: State-of-the-art
+
+::: {style="font-size: 90%"}
+::: {.fragment}
+- Adjusting errors in mechanistic-based prediction models (like ABMs). [@compagniHybridNeuralNetworkSEIR2022]
+:::
+
+::: {.fragment}
+- Incorporating mechanistically inferred data as an additional -omics layer. [@zampieriMachineDeepLearning2019]
+:::
+
+::: {.fragment}
+- Using pathway-networks to add "external knowledge" as features. [@altaweraqiImprovedPredictionGene2022]
+:::
+
+::: {.fragment}
+- Creating a loss-function with a mechanistic penalty for modeling tumor cell-density [@gawIntegrationMachineLearning2019]
+:::
+
+::: {.fragment}
+- and more [@jornerMachineLearningMeets2021; @willardIntegratingScientificKnowledge2022a; @jiaPhysicsGuidedMachineLearning2021; @vonruedenInformedMachineLearning2023]
+:::
+:::
+
+::: {.fragment}
+::: {.callout-warning}
+1. Mechanistic Machine Learning **is not** domain-knowledge-aided feature engineering. You need a whole other model to complement the ML algorithm.
+
+2. This isn't just ML ensemble; you must have an ML and a Mech model.
+:::
+
+:::
+
+## MechML: My own applications
+
+::: {.columns layout-align="center"}
+
+::: {.column width="30%"}
+Prediction of Gene Functions (R01 submitted)
+:::
+
+::: {.column width="30%"}
+Modeling Decision-Making process (R21 on the works)
+:::
+
+::: {.column width="30%"}
+Agent-Based Models (paper)
+
+:::
+
+:::
+
+## MechML: Three strategies
+
+	
+::: {.fragment}
+- **ML Correction**: Use machine learning to learn the errors of a mechanistic model.
+:::
+
+::: {.fragment}
+- **Mechanistic Feature**: Add mechanistic predictions as a feature of a machine learning model.
+:::
+
+::: {.fragment}
+- **Mechanistic Penalty**: Add constraints to the ML algorithm based on a mechanistic model.
+:::
+
+
+!["A van Gogh-style painting of an android holding a large biology book in one hand and a computer in another, examining an evolutionary tree that, instead of leaves, have genes."--DALL-E's interpretation of my description [link](https://labs.openai.com/s/s0GoDQ64OMRfMr1y6uRXtmo9).](fig/DALL%C2%B7E%202022-12-07%2021.41.30.png){width="300px"}
+
+	
+
+## References
