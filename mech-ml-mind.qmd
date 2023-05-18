@@ -1,5 +1,6 @@
 ---
-title: "Mechanistic Machine Learning: Complex Priors"
+title: "Mechanistic Machine Learning"
+subtitle: MInD Harvard Team Visit
 bibliography: references.bib
 author: George G. Vega Yon, Ph.D.
 affiliation: Division of Epidemiology
@@ -13,6 +14,7 @@ format:
     citations-hover: true
     # smaller: true
     css: styles.css
+    transition: convex
 ---
 
 # Overview {background-color="black"}
@@ -130,16 +132,18 @@ Use MechML for "automatic" calibration and prediction adjustment
 
 ## Prediction of Gene Functions {data-id="id1" auto-animate="true"}
 
-![](fig/whole-game.png){width="90%" fig-align="center"}
+![We combine best-performing ML algorithms for predicting gene functions with a mechanistic model of function evolution.](fig/whole-game.png){width="90%" fig-align="center"}
 
-## E.g.: Prescription of ABX
+## ABM sandwich
 
-![](fig/abx-us.png){width="90%" fig-align="center"}
+![Mechanistic ML is used for calibration and prediction.](fig/calibration-and-prediction.drawio.png){width="90%" fig-align="center"}
 
 
-## E.g.: ABM sandwich
+## Prescription of ABX
 
-![](fig/calibration-and-prediction.drawio.png){width="90%" fig-align="center"}
+![We use a social networks model to better inform an ML algorithm for predicting prescription of ABX.](fig/abx-us.png){width="90%" fig-align="center"}
+
+
 
 # Extended Example:<br>Predicting ABX using Soc. Networks and ML {background-color="black"}
 
@@ -159,14 +163,22 @@ Use MechML for "automatic" calibration and prediction adjustment
 ## ML for post-processing
 
 ::: {.columns style="font-size: 70%"}
-::: {.column width="30%" }
-1. Fit the Mech model.
+::: {.column width="30%"}
+::: {.fragment .fade-up}
+1. Fit the Mech model. 
+:::
 
-2. Generate predictions & corresponding errors.
+::: {.fragment .fade-up}
+2. Generate predictions & corresponding errors. 
+:::
 
-3. Have an ML model to learn the errors.
+::: {.fragment .fade-up}
+3. Have an ML model to learn the errors. 
+:::
 
-4. Use the fitted ML to adjust for expected errors.
+::: {.fragment .fade-up}
+4. Use the fitted ML to adjust for expected errors. 
+:::
 :::
 
 ::: {.column width="70%"}
@@ -190,7 +202,13 @@ Use MechML for "automatic" calibration and prediction adjustment
 :::
 
 ::: {.column width="30%" }
+1. Fit the Mech. model.
 
+2. Generate the Mech. predictions.
+
+3. Fit an ML model using the Mech. predictions as features.
+
+4. Generate your MechML. predictions.
 :::
 
 :::
@@ -199,7 +217,25 @@ Use MechML for "automatic" calibration and prediction adjustment
 
 ::: {.columns style="font-size: 70%"}
 ::: {.column width="30%" }
+::: {.fragment .fade-up}
+1. Fit the Mech. model.
+:::
 
+::: {.fragment .fade-up}
+2. Save the parameter estimates, $\hat\theta_{\mbox{Mech}}$.
+:::
+
+::: {.fragment .fade-up}
+3. Include the fitted Mech. model into the loss:
+
+  $$
+  Loss_{\mbox{ML}}(\theta) - \lambda l(\hat{y};\hat\theta_{\mbox{Mech}})
+  $$
+:::
+
+::: {.fragment .fade-up}
+4. Minimize the loss. Bad predictions ($\hat{y}$) under the Mech. model will be penalized.
+:::
 :::
 
 ::: {.column width="70%"}
