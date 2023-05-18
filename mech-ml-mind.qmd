@@ -7,7 +7,7 @@ date: 2023-05-19
 format:
   revealjs:
     embed-resources: true
-    toc: true
+    # toc: true
     slide-number: true
     citeproc: true
     citations-hover: true
@@ -15,15 +15,15 @@ format:
     css: styles.css
 ---
 
-# Overview
+# Overview {background-color="black"}
 
 ## Mechanistic Machine Learning
 
 After all the data pouring, attention to causal inference and mechanistic models is coming back^[@bakerMechanisticModelsMachine2018; @pearlSevenToolsCausal2019]
 
-::: {.colums layout-align="center" style="font-size: 70%"}
+::: {.centering-block style="font-size: 90%"}
 
-::: {.column width="45%" .fragment}
+::: {.column width="45%" .fragment style="padding: 20px"}
 ### Mechanistic models
 
 ::: {.callout}
@@ -35,7 +35,7 @@ After all the data pouring, attention to causal inference and mechanistic models
 :::
 
 
-::: {.column width="45%" .fragment}
+::: {.column width="45%" .fragment style="padding: 20px"}
 ### Machine Learning
 
 ::: {.callout}
@@ -49,7 +49,7 @@ After all the data pouring, attention to causal inference and mechanistic models
 
 ## MechML: State-of-the-art
 
-::: {style="font-size: 65%"}
+::: {style="font-size: 60%"}
 ::: {.fragment}
 - Adjusting errors in mechanistic-based prediction models (like ABMs). [@compagniHybridNeuralNetworkSEIR2022]
 :::
@@ -80,60 +80,12 @@ After all the data pouring, attention to causal inference and mechanistic models
 
 :::
 
-## MechML: My own applications 
-
-::: {.columns style="justify-content: center; display: flex; align-items: center;font-size: 70%"}
-
-::: {.column width="25%" .rectangle}
-#### Prediction of Gene Functions<br>(R01 submitted)
-
-Combine a model of the evolution of gene function with CNNs.
-:::
-
-::: {.column width="2%" }
-:::
-
-::: {.column width="25%" .rectangle}
-#### Modeling Decision-Making process<br>(R21 on the works)
-
-Use a social network diffusion model and ML to predict the prescription of ABX.
-:::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="25%" .rectangle}
-#### Agent-Based Models<br>(paper)
-Use MechML for "automatic" calibration and prediction adjustment
-:::
-
-:::
-
-## E.g.: Prediction of Gene Functions
-
-## E.g.: Prescription of ABX
-
-## E.g.: ABM sandwich
-
-# Extended Example: Prediction of Behavior
-
-## 1
-
-![](fig/mechml-a.png){width="70%" fig-align="center"}
-
-## 2
-
-![](fig/mechml-b.png){width="70%" fig-align="center"}
-
-## 3
-
-![](fig/mechml-c.png){width="70%" fig-align="center"}
-
-
+# How to "MechML"? {background-color="black"}
 
 ## MechML: Three strategies 
 
-	
+::: {style="font-size: 65%"}
+
 ::: {.fragment}
 - **ML Correction**: Use machine learning to learn the errors of a mechanistic model.
 :::
@@ -146,8 +98,119 @@ Use MechML for "automatic" calibration and prediction adjustment
 - **Mechanistic Penalty**: Add constraints to the ML algorithm based on a mechanistic model.
 :::
 
+:::
 
-!["A van Gogh-style painting of an android holding a large biology book in one hand and a computer in another, examining an evolutionary tree that, instead of leaves, have genes."--DALL-E's interpretation of my description [link](https://labs.openai.com/s/s0GoDQ64OMRfMr1y6uRXtmo9).](fig/DALL%C2%B7E%202022-12-07%2021.41.30.png){width="300px"}
+!["A van Gogh-style painting of an android holding a large biology book in one hand and a computer in another, examining an evolutionary tree that, instead of leaves, have genes."--DALL-E's interpretation of my description [link](https://labs.openai.com/s/s0GoDQ64OMRfMr1y6uRXtmo9).](fig/DALL%C2%B7E%202022-12-07%2021.41.30.png){width="300px" style="font-size: 80%"}
+
+
+## MechML: Work-in-progress {auto-animate="true"}
+
+::: {.centering-block}
+
+::: {.column width="25%" .rectangle}
+#### Prediction of Gene Functions<br>(R01 submitted) {data-id="id1"}
+
+Combine a model of the evolution of gene function with CNNs.
+:::
+
+
+::: {.column width="25%" .rectangle}
+#### Modeling Decision-Making process<br>(R21 on the works)
+
+Use a social network diffusion model and ML to predict the prescription of ABX.
+:::
+
+
+::: {.column width="25%" .rectangle}
+#### Agent-Based Models<br>(paper)
+Use MechML for "automatic" calibration and prediction adjustment
+:::
+
+:::
+
+## Prediction of Gene Functions {data-id="id1" auto-animate="true"}
+
+![](fig/whole-game.png){width="90%" fig-align="center"}
+
+## E.g.: Prescription of ABX
+
+![](fig/abx-us.png){width="90%" fig-align="center"}
+
+
+## E.g.: ABM sandwich
+
+![](fig/calibration-and-prediction.drawio.png){width="90%" fig-align="center"}
+
+# Extended Example:<br>Predicting ABX using Soc. Networks and ML {background-color="black"}
+
+## Goal
+
+- We want to build a model to predict the prescription of broadspectrum antibiotics [ABX].
+
+- The goal is to understand what drives prescription.
+
+- From our experience, peer influence informs the decision-making process.
+
+
+---
+
+![](fig/exposures.svg){width="80%" fig-align="center"}
+
+## ML for post-processing
+
+::: {.columns style="font-size: 70%"}
+::: {.column width="30%" }
+1. Fit the Mech model.
+
+2. Generate predictions & corresponding errors.
+
+3. Have an ML model to learn the errors.
+
+4. Use the fitted ML to adjust for expected errors.
+:::
+
+::: {.column width="70%"}
+
+![](fig/mechml-a.png){width="100%" fig-align="center"}
+
+![](fig/mechml-legend.png){width="100%" fig-align="center"}
+
+:::
+
+:::
+
+## Mechanistic prediction as a feature
+
+::: {.columns style="font-size: 70%"}
+
+::: {.column width="70%"}
+![](fig/mechml-b.png){width="100%" fig-align="center"}
+
+![](fig/mechml-legend.png){width="100%" fig-align="center"}
+:::
+
+::: {.column width="30%" }
+
+:::
+
+:::
+
+## Mechanistic Penalty
+
+::: {.columns style="font-size: 70%"}
+::: {.column width="30%" }
+
+:::
+
+::: {.column width="70%"}
+![](fig/mechml-c.png){width="100%" fig-align="center"}
+
+![](fig/mechml-legend.png){width="100%" fig-align="center"}
+:::
+
+:::
+
+
 
 	
 
