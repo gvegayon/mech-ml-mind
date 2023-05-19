@@ -19,6 +19,10 @@ format:
 
 # Overview {background-color="black"}
 
+::: {style="font-size: 60%"}
+Slides can be downloaded from<br>[https://ggv.cl/slides/mind2023](https://ggv.cl/slides/mind2023){target="_blank"}
+:::
+
 ## Mechanistic Machine Learning
 
 After all the data pouring, attention to causal inference and mechanistic models is coming back^[@bakerMechanisticModelsMachine2018; @pearlSevenToolsCausal2019]
@@ -110,7 +114,7 @@ After all the data pouring, attention to causal inference and mechanistic models
 ::: {.centering-block}
 
 ::: {.column width="25%" .rectangle}
-#### Prediction of Gene Functions<br>(R01 submitted) {data-id="id1"}
+#### Prediction of Gene Functions<br>(R01 submitted)
 
 Combine a model of the evolution of gene function with CNNs.
 :::
@@ -130,18 +134,23 @@ Use MechML for "automatic" calibration and prediction adjustment
 
 :::
 
-## Prediction of Gene Functions {data-id="id1" auto-animate="true"}
+## Prediction of Gene Functions[^one-collab]
 
-![We combine best-performing ML algorithms for predicting gene functions with a mechanistic model of function evolution.](fig/whole-game.png){width="90%" fig-align="center"}
+![](fig/whole-game.png){width="90%" fig-align="center"}
 
-## ABM sandwich
+[^one-collab]: R01 under review; joint with Huaiyu Mi (USC), Alun Thomas, and  Karen Eilbeck (UoU).
 
-![Mechanistic ML is used for calibration and prediction.](fig/calibration-and-prediction.drawio.png){width="90%" fig-align="center"}
+## ABM sandwich[^two-collab]
 
+![](fig/calibration-and-prediction.drawio.png){width="90%" fig-align="center"}
 
-## Prescription of ABX
+[^two-collab]: Manuscript under development with Derek Meyer (UoU).
 
-![We use a social networks model to better inform an ML algorithm for predicting prescription of ABX.](fig/abx-us.png){width="90%" fig-align="center"}
+## Prescription of ABX[^three-collab]
+
+![](fig/abx-us.png){width="90%" fig-align="center"}
+
+[^three-collab]: R21 under development with Karim Khader and Barbara Jones
 
 
 
@@ -156,9 +165,19 @@ Use MechML for "automatic" calibration and prediction adjustment
 - From our experience, peer influence informs the decision-making process.
 
 
----
+## Social Network Model of Influence
 
 ![](fig/exposures.svg){width="80%" fig-align="center"}
+
+## ABM for Policy Design
+
+::: {.fragment style="position: absolute; top:50; left: 0; margin:20px;width:45%"}
+![](fig/peer-leader.png){width="100%"}
+:::
+
+::: {.fragment style="position: absolute; bottom: 0; right:0; margin:20px;width:65%"}
+![](fig/tie-formation.png){width="100%"}
+:::
 
 ## ML for post-processing
 
@@ -202,13 +221,21 @@ Use MechML for "automatic" calibration and prediction adjustment
 :::
 
 ::: {.column width="30%" }
+::: {.fragment .fade-up}
 1. Fit the Mech. model.
+:::
 
+::: {.fragment .fade-up}
 2. Generate the Mech. predictions.
+:::
 
+::: {.fragment .fade-up}
 3. Fit an ML model using the Mech. predictions as features.
+:::
 
+::: {.fragment .fade-up}
 4. Generate your MechML. predictions.
+:::
 :::
 
 :::
