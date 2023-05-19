@@ -15,6 +15,7 @@ format:
     # smaller: true
     css: styles.css
     transition: convex
+    footer: George G. Vega Yon -- [ggv.cl/slides/mind2023](https://ggv.cl/slides/mind2023)
 ---
 
 # Overview {background-color="black"}
@@ -25,12 +26,19 @@ Slides can be downloaded from<br>[https://ggv.cl/slides/mind2023](https://ggv.cl
 
 ## Machine Learning is Broken
 
-- After all the data pouring, attention to causal inference and mechanistic models is coming back^[@bakerMechanisticModelsMachine2018; @pearlSevenToolsCausal2019]
+::: {style="font-size: 60%"}
 
+::: {.fragment}
+- After all the data pouring, attention to causal inference and mechanistic models is coming back [@bakerMechanisticModelsMachine2018; @pearlSevenToolsCausal2019]
+:::
+
+::: {.fragment}
 - The case of Google Flu Trends: Paper reported a 0.97 correlation [@ginsbergDetectingInfluenzaEpidemics2009], but predictions overshoot by 100% [@kandulaReappraisingUtilityGoogle2019; @lazerParableGoogleFlu2014].
+:::
 
+:::
 
-![](fig/google-fail-flu-trends.png){width="100%"}
+![](fig/google-fail-flu-trends.png){width="90%" fig-align="center"}
 
 
 ## Mechanistic Machine Learning
@@ -170,6 +178,10 @@ Some examples using a mix between ML and mechanistic models exists, e.g., @wangT
 
 ![](fig/tdefsi.png){width="90%" fig-align="center"}
 
+::: {.fragment layout-align="right" width="100%"}
+Synthetic data for ML is a whole different story [@chenSyntheticDataMachine2021; @luMachineLearningSynthetic2023].
+:::
+
 ## Prescription of ABX[^three-collab]
 
 ![](fig/abx-us.png){width="90%" fig-align="center"}
@@ -304,9 +316,53 @@ Some examples using a mix between ML and mechanistic models exists, e.g., @wangT
 :::
 
 
-##
+## Discussion
+
+::: {style="font-size: 70%"}
+
+::: {.fragment .fade-up}
+- Machine learning (and big data) is excellent but has important limitations (e.g., Google Flu Trends).
+:::
+
+::: {.fragment .fade-up}
+- Mechanistic models provide a causal understanding of phenomena but are limited when predicting.
+:::
+
+::: {.fragment .fade-up}
+- We can use MechML to combine the best of both worlds (theory and data-driven prediction).
+:::
+
+::: {.fragment .fade-up}
+- MechML is not theory-aided feature engineering.
+:::
+
+::: {.fragment .fade-up}
+- At least three ways to apply it:
+
+  - ML to correct for systematic biases.
+
+  - Mech predictions as features in an ML algorithm.
+
+  - A Mech penalty embedded in the ML Loss function.
+:::
+
+:::
 
 
+## Fin
+
+::: {style="text-align: center"} 
+Thank you!
+
+<text style="font-weight: bold; font-size: 120%">"Mechanistic Machine Learning"</text>
+
+George G. Vega Yon, Ph.D.
+
+[https://ggv.cl](https://ggv.cl)
+
+george.vegayon@utah.edu
+
+:::
 
 
 ## References
